@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Color Picker
+Comment=KDE Color Picker
+Exec=python3 /home/istefaniak/kde-color-picker/main.py
+Icon=color-picker
+Terminal=false
+Categories=Utility;Graphics;
+StartupWMClass=color-picker-kde
+X-KDE-Shortcuts=Meta+Shift+C
