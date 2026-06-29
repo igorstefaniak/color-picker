@@ -1,9 +1,15 @@
-# KDE Color Picker
+# KToys
 
-A PySide6-based color picker for KDE Plasma.
+A PySide6-based utility suite and launcher for the KDE Plasma desktop environment.
 
 ## Features
 
+### KToys Launcher
+- Searchable dashboard of custom utilities.
+- Quick system tray integration.
+- Custom module activation and toggles.
+
+### KColorPicker Module
 - **Screen Magnifier:** Select pixels with zoom.
 - **Controls:**
   - `Mouse Move` to target.
@@ -15,17 +21,18 @@ A PySide6-based color picker for KDE Plasma.
   - Supports HEX, RGB, HSL, and HSV.
   - Keeps history of the last 8 colors.
   - Customizable color formats and prefixes.
-- **KDE Integration:**
-  - Runs in system tray.
-  - Global activation shortcut (`Meta+Shift+C` by default, configurable).
-  - Single instance enforcement (new launches trigger the picker in the active instance).
+
+### KDE Integration
+- System Tray support with minimize-to-tray.
+- Global activation shortcuts (e.g. `Meta+Shift+C` for KColorPicker, configurable in KColorPicker settings).
+- Single-instance enforcement using local sockets.
 
 ## Prerequisites
 
 Python 3 and `venv` are required.
 
 - **Ubuntu/Debian:** `sudo apt install python3 python3-venv`
-- **Fedora:** `sudo dnf install python3 python3-virtualenv`
+- **Fedora:** `sudo dnf install python3`
 - **Arch/Manjaro:** `sudo pacman -S python`
 
 ## Installation
@@ -37,12 +44,13 @@ Run the installer:
 ```
 
 The installer:
-1. Copies files to `~/.local/share/color-picker-kde/`.
+1. Copies files to `~/.local/share/ktoys/`.
 2. Sets up a virtual environment and installs `PySide6`.
-3. Adds launcher to `~/.local/bin/color-picker-kde`.
-4. Registers `color-picker-kde.desktop` in `~/.local/share/applications/` with default shortcut `Meta+Shift+C`.
+3. Adds the launcher to `~/.local/bin/ktoys`.
+4. Registers `ktoys.desktop` in `~/.local/share/applications/`.
 
 ## Usage
 
-- **Start:** Run `color-picker-kde` or use the global shortcut `Meta+Shift+C`.
-- **System Tray:** Right-click tray icon to open settings or exit.
+- **Start Launcher:** Run `ktoys` or start KToys from your application menu.
+- **Start Color Picker directly:** Run `ktoys --module color_picker` or use the global shortcut `Meta+Shift+C`.
+- **System Tray:** Use the system tray icon to launch modules, open settings, or exit.

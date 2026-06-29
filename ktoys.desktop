@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+Name=KToys
+Comment=Utility suite for KDE
+Exec=ktoys
+Icon=preferences-desktop-accessories
+Terminal=false
+Categories=Utility;
+Actions=ColorPicker;
+
+[Desktop Action ColorPicker]
+Name=KColorPicker
+Exec=ktoys --module color_picker
+Icon=color-picker
+X-KDE-Shortcuts=Meta+Shift+C
+StartupNotify=false
